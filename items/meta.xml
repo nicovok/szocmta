@@ -1,0 +1,27 @@
+<meta>
+
+    <script src='shared/imports.lua' type='shared' />
+    <script src='shared/items.lua' type='shared' />
+
+    <script src='client/fonts.lua' type='client' />
+
+    <script src='shared/main.lua' type='shared' />
+    <script src='client/main.lua' type='client' />
+    <script src='server/main.lua' type='server' />
+
+    <script src='server/trashes.lua' type='server' />
+
+    <script src='client/useitem.lua' type='client' />
+    <script src='server/useitem.lua' type='server' />
+
+    <script src='client/itemlist.lua' type='client' />
+
+    <export function='hasItem' type='shared' />
+    <export function='openInventory' type='client' />
+
+    <file src='client/items/1.png' />
+    <file src='client/items/2.png' />
+    <file src='client/items/3.png' />
+    <file src='client/items/4.png' />
+
+</meta>

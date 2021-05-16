@@ -1,0 +1,15 @@
+<meta>
+
+    <script src='shared/main.lua' type='shared' />
+    <script src='client/main.lua' type='client' />
+    <script src='server/main.lua' type='server' />
+
+    <script src='client/interiorinfo.lua' type='client' />
+
+    <file src='client/icons/gov.png' />
+    <file src='client/icons/house.png' />
+    <file src='client/icons/houseforsale.png' />
+    <file src='client/icons/garage.png' />
+    <file src='client/icons/garageforsale.png' />
+
+</meta>

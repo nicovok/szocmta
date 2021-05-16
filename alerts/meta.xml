@@ -1,0 +1,8 @@
+<meta>
+    <script src="source/main.lua" type="client" />
+    
+    <export function="alert" type="client" />
+    
+    <file src="source/sounds/alert.mp3" />
+    <download_priority_group>-5</download_priority_group>
+</meta>

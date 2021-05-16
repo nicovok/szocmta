@@ -1,0 +1,35 @@
+<meta>
+
+    <!-- Config file -->
+    <script src='__config.lua' type='shared' cache='false' />
+
+    <script src='source/shared/main.lua' type='shared' cache='false' />
+    <script src='source/client/main.lua' type='client' cache='false' />
+    <script src='source/server/main.lua' type='server' />
+
+    <script src='source/client/rect.lua' type='client' cache='false' />
+    <script src='source/server/database.lua' type='server' />
+
+    <script src='source/client/headmove.lua' type='client' cache='false' />
+    <script src='source/server/headmove.lua' type='server' />
+
+    <export function='getFunction' type='shared' />
+    <export function='getServerTag' type='shared' />
+    <export function='findPlayer' type='shared' />
+    <export function='isPlayerDeveloper' type='shared' />
+    <export function='getFont' type='client' />
+    <export function='requestRoundRectangleShader' type='client' />
+    <export function='getDatabaseConnection' type='server' />
+
+    <file src='assets/corner.png' />
+    <file src='assets/shadow.png' />
+    <file src='assets/vin.png' />
+
+    <file src='assets/fonts/SFPro.ttf' />
+    <file src='assets/fonts/SFProBold.ttf' />
+    <file src='assets/fonts/FontAwesome.otf' />
+    <file src='assets/fonts/Roboto.ttf' />
+    <file src='assets/fonts/RobotoMedium.ttf' />
+    <file src='assets/fonts/gtaFont.ttf' />
+
+</meta>

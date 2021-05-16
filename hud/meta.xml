@@ -1,0 +1,14 @@
+<meta>
+    
+    <script src='client/main.lua' type='client' />
+    
+    <script src='client/widgets/stats.lua' type='client' />
+    <script src='client/widgets/radar.lua' type='client' />
+
+    <file src='client/shaders/blackwhite.fx' />
+
+    <file src='client/images/map.png' />
+    <file src='client/images/arrow.png' />
+    
+    <download_priority_group>-4</download_priority_group>
+</meta>

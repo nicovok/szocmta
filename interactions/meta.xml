@@ -1,0 +1,11 @@
+<meta>
+    
+    <script src="client/main.lua" type="client" />
+    
+    <script src="client/interactions.lua" type="client" />
+    
+    <file src="client/icons/close.png" />
+    <file src="client/icons/baggage.png" />
+    
+    <download_priority_group>-6</download_priority_group>
+</meta>

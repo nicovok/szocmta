@@ -1,0 +1,12 @@
+<meta>
+    
+    <script src="source/client/main.lua" type="client" />
+    <script src="source/client/fly.lua" type="client" />
+    
+    <script src="source/server/duty.lua" type="server" />
+    <script src="source/server/commands.lua" type="server" />
+    
+    <script src="source/shared/permissions.lua" type="shared" />
+    
+    <download_priority_group>-9</download_priority_group>
+</meta>

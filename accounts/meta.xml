@@ -1,0 +1,17 @@
+<meta>
+    <info author="Nico" version="0.1" />
+    
+    <script src="__config.lua" type="shared" />
+    
+    <script src="source/client/main.lua" type="client" />
+    
+    <script src="source/client/login.lua" type="client" />
+    
+    <script src="source/server/main.lua" type="server" />
+    
+    <script src="source/server/login.lua" type="server" />
+    
+    <file src="assets/login-background.png" />
+    <file src="assets/login-checkbox.png" />
+    <download_priority_group>-3</download_priority_group>
+</meta>

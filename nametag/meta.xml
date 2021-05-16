@@ -1,0 +1,10 @@
+<meta>
+    <script src="client/main.lua" type="client" />
+    
+    <file src="client/icons/typing.png" />
+    <file src="client/icons/consoling.png" />
+    <file src="client/icons/admin.png" />
+    <file src="client/icons/dev.png" />
+    <file src="client/icons/driving.png" />
+    <download_priority_group>-11</download_priority_group>
+</meta>

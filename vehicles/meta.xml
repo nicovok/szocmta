@@ -1,0 +1,19 @@
+<meta>
+    
+    <script src="shared/main.lua" type="shared" cache="false" />
+    <script src="client/main.lua" type="client" cache="false" />
+    <script src="server/main.lua" type="server" />
+    
+    <!--<script src='client/creator.lua' type='client' cache='false' />-->
+    <script src="server/creator.lua" type="server" />
+    
+    <file src="client/sounds/lightswitch.mp3" />
+    <file src="client/sounds/starter.mp3" />
+    <file src="client/sounds/beltin.mp3" />
+    <file src="client/sounds/beltout.mp3" />
+    
+    <export function="isValidModel" type="model" />
+    <export function="loadVehicle" type="server" />
+    
+    <download_priority_group>-12</download_priority_group>
+</meta>

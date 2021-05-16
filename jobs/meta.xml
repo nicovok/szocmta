@@ -1,0 +1,11 @@
+<meta>
+    <script src="shared/peds.lua" type="shared" />
+    <script src="shared/jobs.lua" type="shared" />
+    
+    <script src="shared/main.lua" type="shared" />
+    <script src="client/main.lua" type="client" />
+    <script src="server/main.lua" type="server" />
+    
+    <export function="openPanel" type="client" />
+    <download_priority_group>-7</download_priority_group>
+</meta>

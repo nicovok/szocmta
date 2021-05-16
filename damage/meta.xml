@@ -1,0 +1,12 @@
+<meta>
+    
+    <script src="shared/main.lua" type="shared" />
+    <script src="client/main.lua" type="client" />
+    <script src="server/main.lua" type="server" />
+    
+    <file src="client/shaders/blackwhite.fx" />
+    <file src="client/sounds/deathup.mp3" />
+    <file src="client/images/vin.png" />
+    
+    <download_priority_group>-10</download_priority_group>
+</meta>

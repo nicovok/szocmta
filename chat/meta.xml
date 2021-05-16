@@ -1,0 +1,7 @@
+<meta>
+    <script src="shared/main.lua" type="shared" />
+    <script src="client/main.lua" type="client" />
+    <script src="server/main.lua" type="server" />
+    
+    <download_priority_group>-8</download_priority_group>
+</meta>

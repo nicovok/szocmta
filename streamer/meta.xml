@@ -1,0 +1,12 @@
+<meta>
+    
+    <script src="__config.lua" type="client" />
+    
+    <script src="source/main.lua" type="client" />
+    
+    <script src="source/process.lua" type="client" />
+    
+    <script src="source/utils.lua" type="client" />
+    
+    <download_priority_group>-2</download_priority_group>
+</meta>
