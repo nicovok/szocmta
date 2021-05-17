@@ -77,10 +77,10 @@ addEventHandler('onClientElementDataChange', root,
                 elements[source].admin = value
             end
         else
-            if key == 'ped.name' then
+            if key == 'npc.id' then
+                elements[source].id = value
+            elseif key == 'npc.name' then
                 elements[source].name = value
-            elseif key == 'ped.visibleType' then
-                elements[source].type = value
             end
         end
     end
@@ -101,8 +101,8 @@ function loadElementData(element)
         }
     else
         return {
-            name = getElementData(element, 'ped.name') or 'Ismeretlen',
-            type = getElementData(element, 'ped.visibleType') or 'Ismeretlen',
+            id = getElementData(element, 'npc.id') or 'Ismeretlen',
+            name = getElementData(element, 'npc.name') or 'Ismeretlen',
         }
     end
 end
@@ -220,8 +220,9 @@ function processElement(element, data)
             table.insert(icons, 'client/icons/consoling.png')
         end
     else
+        text = text .. ('[%s%s%s] '):format('#d17560', 'NPC', '#ffffff')
         text = text .. data.name
-        text = text .. (' [%s%s%s]'):format('#d17560', data.type, '#ffffff')
+        text = text .. (' (%s)'):format(data.id)
     end
 
     return text, icons
