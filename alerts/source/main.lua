@@ -72,12 +72,6 @@ function renderAlert()
     dxDrawText(alertData.text, x, y, x + w, y + boxH, tocolor(255, 255, 255, alpha), 1, font, 'center', 'center')
 end
 
-bindKey('i', 'down',
-    function()
-        alert('Sziasztok, mi a helyzet veletek?')
-    end
-)
-
 local root = getResourceRootElement(getResourceFromName('core'))
 addEventHandler('onClientResourceStart', resourceRoot, loadFont)
 addEventHandler('onClientResourceStart', root, loadFont)
