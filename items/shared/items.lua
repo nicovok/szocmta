@@ -57,3 +57,11 @@ end
 function isItemEatable(itemID)
     return _items[itemID] and _items[itemID].eatable or false
 end
+
+keyItems = {
+    [1] = true,
+}
+
+function isItemKey(itemID)
+    return keyItems[itemID]
+end

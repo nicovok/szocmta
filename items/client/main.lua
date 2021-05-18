@@ -317,6 +317,9 @@ function clickInventory(button, state, clickX, clickY, wx, wy, wz, clickedElemen
                     y = clickY - panelData.position.y
                 }
 
+                removeEventHandler('onClientRender', root, renderInventory)
+                addEventHandler('onClientRender', root, renderInventory)
+
                 return
             end
 
@@ -374,6 +377,15 @@ function clickInventory(button, state, clickX, clickY, wx, wy, wz, clickedElemen
 					itemMove = false
 					return
 				end
+
+                if getElementType(clickedElement) == 'keycopier' then
+                    if currentElement == localPlayer then
+                        copyKey(sourceItem.itemID, sourceItem.count, sourceItem.value)
+                    end
+
+                    itemMove = false
+                    return
+                end
 
 				if sourceItem.duty == 1 then 
 					outputChatBox(exports.core:getServerTag('error') .. 'Duty itemet nem tudsz átadni', 255, 255, 255, true)

@@ -24,6 +24,7 @@ elementTypes = {
 customTypes = {
     ['trash.id'] = 'trash',
     ['safe.id'] = 'safe',
+    ['keycopier'] = 'keycopier'
 }
 
 _getElementType = getElementType

@@ -16,6 +16,9 @@
 
     <script src='client/itemlist.lua' type='client' />
 
+    <script src='client/keycopier.lua' type='client' />
+    <script src='client/keycopier.lua' type='server' />
+
     <export function='hasItem' type='shared' />
     <export function='openInventory' type='client' />
 
