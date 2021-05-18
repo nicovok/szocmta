@@ -65,11 +65,11 @@ function renderAlert()
 
     local w = alertData.textWidth + resp(20)
     local x = mx - w/2
-    local color = tocolor(210, 117, 98, alpha)
+    local color = tocolor(220, 220, 220, alpha)
     local radius = resp(10)
 
     drawRoundedRectangle(x, y, w, boxH, color, radius)
-    dxDrawText(alertData.text, x, y, x + w, y + boxH, tocolor(255, 255, 255, alpha), 1, font, 'center', 'center')
+    dxDrawText(alertData.text, x, y, x + w, y + boxH, tocolor(100, 100, 100, alpha), 1, font, 'center', 'center')
 end
 
 local root = getResourceRootElement(getResourceFromName('core'))
