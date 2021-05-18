@@ -41,6 +41,8 @@ addEventHandler('onClientResourceStart', root,
             SFPro15 = exports.core:getFont('SFPro', resp(15))
 
             if res == resource then
+                triggerServerEvent('interiors.requestInteriors', localPlayer)
+
                 for id, interiorType in pairs(interiorTypes) do
                     interiorTextures[id] = dxCreateTexture('client/icons/' .. interiorType.icon .. '.png', 'argb', true, 'clamp')
                     if fileExists('client/icons/' .. interiorType.icon .. 'forsale.png') then

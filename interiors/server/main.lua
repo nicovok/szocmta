@@ -78,9 +78,9 @@ addEventHandler('onResourceStart', resourceRoot,
     end
 )
 
-addEventHandler('onPlayerJoin', root,
+registerEvent('interiors.requestInteriors', root,
     function()
-        triggerClientEvent(source, 'interiors.syncInteriors', root, interiors)
+        triggerClientEvent(client, 'interiors.syncInteriors', root, interiors)
     end
 )
 
