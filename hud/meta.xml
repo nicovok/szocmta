@@ -9,6 +9,9 @@
 
     <file src='client/images/map.png' />
     <file src='client/images/arrow.png' />
+
+    <file src='client/images/blips/hospital.png' />
+    <file src='client/images/blips/gasstation.png' />
     
     <download_priority_group>-4</download_priority_group>
 </meta>
