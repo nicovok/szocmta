@@ -4,16 +4,16 @@
     <script src="client/main.lua" type="client" cache="false" />
     <script src="server/main.lua" type="server" />
     
-    <!--<script src='client/creator.lua' type='client' cache='false' />-->
-    <script src="server/creator.lua" type="server" />
+    <script src="client/radio.lua" type="client" />
+    <script src="server/radio.lua" type="server" />
     
     <file src="client/sounds/lightswitch.mp3" />
     <file src="client/sounds/starter.mp3" />
     <file src="client/sounds/beltin.mp3" />
     <file src="client/sounds/beltout.mp3" />
     
-    <export function="isValidModel" type="model" />
+    <export function="isValidModel" type="shared" />
     <export function="loadVehicle" type="server" />
     
-    <download_priority_group>-12</download_priority_group>
+    <download_priority_group>-14</download_priority_group>
 </meta>

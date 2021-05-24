@@ -20,6 +20,25 @@ function useItem(item, slot)
         end
     end
 
+    if item.itemID == 2 then
+        if isPedInVehicle(localPlayer) then
+            local seat = getPedOccupiedVehicleSeat(localPlayer)
+            if seat == 0 or seat == 1 then
+                if getElementData(vehicle, 'vehicle.radioTrack') ~= 0 then
+                    outputChatBox(exports.core:getServerTag('error') .. 'Már van a rádióban egy kazetta.', 0, 0, 0, true)
+                    return
+                end
+
+                local vehicle = getPedOccupiedVehicle(localPlayer)
+                setElementData(vehicle, 'vehicle.radioTrack', item.value)
+
+                currentItems[slot] = nil
+                triggerServerEvent('items.deleteItem', localPlayer, localPlayer, item)
+                setElementItems(localPlayer, currentItems)
+            end
+        end
+    end
+
     triggerServerEvent('onPlayerUseItem', localPlayer, item, slot)
 end
 

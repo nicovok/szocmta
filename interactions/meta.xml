@@ -7,5 +7,5 @@
     <file src="client/icons/close.png" />
     <file src="client/icons/baggage.png" />
     
-    <download_priority_group>-6</download_priority_group>
+    <download_priority_group>-8</download_priority_group>
 </meta>

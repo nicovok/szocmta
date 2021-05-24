@@ -18,9 +18,9 @@ panelData = {
     },
 }
 
-local currentElement = false
-local currentItems = false
-local currentMoney = 0
+currentElement = false
+currentItems = false
+currentMoney = 0
 
 local slotHover = false
 local itemMove = false
@@ -87,6 +87,8 @@ function drawItem(x, y, size, hover, item, count, alpha, postGUI)
 
         if item.itemID == 1 then
             table.insert(tooltipData, 'ID: ' .. item.value)
+        elseif item.itemID == 2 then
+            table.insert(tooltipData, item.value == 0 and 'Nincsen felcímkézve' or 'Cimke: ' .. getCassetteTrack(item.value))
         end
     end
 end
@@ -96,7 +98,7 @@ function openInventory(element)
     currentItems = getElementItems(element)
     
     if getElementType(element) == 'player' then
-        currentMoney = getElementData(element, 'character.money')
+        currentMoney = getElementData(element, 'character.money') or 20
     end
 
     if not currentItems then
@@ -142,6 +144,8 @@ function openInventory(element)
 
     removeEventHandler('onClientClick', root, clickInventory)
     addEventHandler('onClientClick', root, clickInventory)
+
+    outputConsole(inspect(_fonts))
 end
 
 function closeInventory()
@@ -152,7 +156,7 @@ function closeInventory()
 end
 
 function renderInventory()
-    if not areFontsLoaded() then return end
+    --if not areFontsLoaded() then return end
     if not currentItems then return end
 
     panelData.hovered = false
@@ -453,7 +457,7 @@ function clickInventory(button, state, clickX, clickY, wx, wy, wz, clickedElemen
                 if currentItems[slotHover.slot] then
                     local hoverItem = currentItems[slotHover.slot]
 
-                    if isItemStackable(hoverItem.itemID) and hoverItem.itemID == sourceItem.itemID then
+                    if isItemStackable(hoverItem.itemID) and hoverItem.itemID == sourceItem.itemID and hoverItem.value == sourceItem.value then
                         if itemMove.count then 
 							currentItems[slotHover.slot].count = hoverItem.count + itemMove.count
 
@@ -468,6 +472,7 @@ function clickInventory(button, state, clickX, clickY, wx, wy, wz, clickedElemen
 							currentItems[itemMove.slot] = nil
 							triggerServerEvent('items.deleteItem', localPlayer, currentElement, sourceItem)
 						end
+
 						setElementItems(currentElement, currentItems)
                     end
                 else

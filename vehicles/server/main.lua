@@ -107,6 +107,10 @@ function loadVehicle(data)
     setElementData(vehicle, 'vehicle.owner', data.id)
     setElementData(vehicle, 'vehicle.engine', false)
 
+    setElementData(vehicle, 'vehicle.radioTrack', 0)
+    setElementData(vehicle, 'vehicle.playTick', false)
+    setElementData(vehicle, 'vehicle.playLength', false)
+
     setVehicleFuelTankExplodable(vehicle, false)
 
     table.insert(loadedVehicles, vehicle)

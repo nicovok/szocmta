@@ -47,8 +47,6 @@ function getInteractions(element, type)
                     use = function(element, index)
                         exports.alerts:alert('Sikeresen felmondtál.')
                         setElementData(localPlayer, 'character.job', 0)
-
-                        table.remove(_interactions, index)
                     end,
                 })
             end
@@ -93,6 +91,23 @@ function getInteractions(element, type)
                 stopInteraction()
             end,
         })
+
+        if getElementData(element, 'vehicle.radioTrack') > 0 then
+            local seat = getPedOccupiedVehicleSeat(localPlayer)
+            if seat == 0 or seat == 1 then
+                table.insert(interactions, {
+                    icon = '',
+                    name = 'Kazetta kivétele',
+                    use = function(element, index)
+                        local track = getElementData(element, 'vehicle.radioTrack')
+                        if track ~= 0 then
+                            setElementData(element, 'vehicle.radioTrack', 0)
+                            triggerServerEvent('items.giveItem', localPlayer, localPlayer, nil, 2, 1, track)
+                        end
+                    end
+                })
+            end
+        end
     end
 
     table.insert(interactions, {
@@ -105,3 +120,13 @@ function getInteractions(element, type)
 
     return interactions
 end
+
+addEventHandler('onClientElementDataChange', root,
+    function(key)
+        if currentElement then
+            if key == 'vehicle.radioTrack' then
+                _interactions = getInteractions(currentElement, getElementType(currentElement))
+            end
+        end
+    end
+)
